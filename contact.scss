@@ -1,0 +1,94 @@
+$buttoncolor: red;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+.hero {
+    width: 90%;
+    height: 100%;
+    background-image: url(contact-us-image.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 90%;
+    height: 500px;
+    border: 4px dashed black;
+    /* Adding dashed border */
+}
+
+.input-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+form input,
+form textarea {
+    width: 60%;
+    padding: 10px;
+    outline: 0;
+    border: 2px solid black;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+
+label {
+    height: 110%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: black;
+    cursor: text;
+    transition: 0.5s;
+}
+
+button {
+    font-size: 24px;
+    padding: 10px 0;
+    color: royalblue;
+    outline: none;
+    border: 2px solid black;
+    width: 50%;
+    cursor: ew-resize;
+    margin: 20px auto 0;
+    border-radius: 30px;
+    background-color: $buttoncolor;
+    /* Changing button background color to red */
+}
+
+button::after {
+    content: attr(name);
+    text-transform: uppercase;
+    /* Making button names capital */
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    top: -35px;
+    font-size: 14px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row .input-group {
+    flex-basis: 48%;
+}
